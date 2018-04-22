@@ -10,8 +10,11 @@
 				<img src="{{asset('/images/' . $post->image)}}" width="800" height="400" />
 			@endif
 			<h1>{{ $post->title }}</h1>
+			<!-- Go to www.addthis.com/dashboard to customize your tools --> 
+			<div class="addthis_inline_share_toolbox"></div> 
 			<p>{!! $post->body !!}</p>
 			<hr>
+			<p>Posted: {{ $post->updated_at->diffForHumans() }}</p>
 			<p>Posted In: {{ $post->category->name }}</p>
 		</div>
 	</div>
@@ -67,5 +70,9 @@
 			@endforeach
 		</div>
 	</div>
+	
+	<!-- Go to www.addthis.com/dashboard to customize your tools -->
+	<!--Change this code with your own Addthis code to make your social buttons work -->
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ad64d55536c04fe"></script> 
 
 @endsection
