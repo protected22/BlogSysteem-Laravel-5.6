@@ -42,11 +42,11 @@
 				<div class="card-body bg-light">
 					<dl class="dl-horizontal">
 						<dt>Created at:</dt>
-						<dd>{{ date('j M, Y - H:i', strtotime($post-> created_at))}}</dd>
+						<dd>{{ $post->created_at->diffForHumans() }}</dd>
 					</dl>
 					<dl class="dl-horizontal">
 						<dt>Last Updated:</dt>
-						<dd>{{ date('j M, Y - H:i', strtotime($post-> updated_at)) }}</dd>
+						<dd>{{ $post->updated_at->diffForHumans() }}</dd>
 					</dl>
 					<hr/>
 					<div class="row">
